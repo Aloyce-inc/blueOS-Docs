@@ -59,9 +59,16 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: github-pages
-          path: .
+          path: site
+  
+      - name: List site folder content for debug
+        run: ls -la site
   
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          # optionally specify the directory if needed, but usually not necessary
+          # path: site
+
 
