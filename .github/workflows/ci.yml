@@ -29,11 +29,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        uses: awalsh128/cache-apt-pkgs-action@v1.4.3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          pattern: dist.*
-          path: artifacts
+          path: site
 
   deploy:
     if: github.ref == 'refs/heads/main'
