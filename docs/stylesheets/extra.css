@@ -1,0 +1,180 @@
+/* HOMEPAGE HERO TEXT STYLING */
+.homepage-hero-text {
+  position: absolute;
+  bottom: 3rem;
+  left: 11rem; /* Direct alignment as specified */
+  max-width: 700px;
+  z-index: 20;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1220px) {
+  .homepage-hero-text {
+    left: 8rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .homepage-hero-text {
+    left: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-hero-text {
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 2rem;
+  }
+}
+
+.homepage-hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 700px;
+}
+
+.homepage-hero-text p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primary button - filled style like MkDocs */
+.hero-btn-primary {
+  background-color: #ef5552;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn-primary:hover {
+  background-color: #e53935;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/* Secondary button - transparent with subtle border */
+.hero-btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hero-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* Ensure proper positioning of the hero */
+.custom-hero {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: url('../jbbanner\ \(2\).png') no-repeat center center !important;
+  background-size: cover !important;
+  background-position: center !important;
+  z-index: 1 !important;
+  overflow: hidden;
+}
+
+/* Add a subtle overlay to improve text readability if needed */
+.custom-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1220px) {
+  .homepage-hero-text {
+    padding: 0 0.8rem; /* Tighter padding on larger screens */
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1219px) {
+  .homepage-hero-text {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .homepage-hero-text {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-hero-text {
+    bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .homepage-hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .homepage-hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-btn {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .homepage-hero-text h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

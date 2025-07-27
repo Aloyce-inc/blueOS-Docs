@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if page.url == "" %}
+    <div class="custom-hero"></div>
+    <div class="homepage-hero-text">
+      <h1>Documentation that simply works</h1>
+      <p>Write your documentation in Markdown and create a professional static site in minutes – searchable, customizable, in 60+ languages for all devices.</p>
+    </div>
+  {% endif %}
+
+{% endblock %}

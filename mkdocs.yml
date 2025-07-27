@@ -1,7 +1,9 @@
-site_name: BlueOS Documentation
+site_name: BlueOS Developer Documentation
 site_url: https://blueos.aloyce.com/
 theme:
   name: material
+ # custom_dir: overrides
+  logo: aloycian (4).png
   palette:
     primary: black
     accent: blue
@@ -12,15 +14,16 @@ theme:
     - navigation.instant.preview
     - navigation.tracking
     - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
+    #- navigation.tabs.sticky
+    #- navigation.sections
     - navigation.expand
     # - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
-
+    - content.tooltips
+    #- navigation.footer
 
 plugins:
   - search
@@ -39,12 +42,33 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Home: index.md
-  - Pubic Hair:
-    - my first one: lebron/code.md
-  - About: 
-    - lapibi: Pubert/cutie.md
-    - chung: Pubert/steven.md
-  - Tags: tags.md
-  - Blog: 
-    - blog/index.md
+  - Getting Started: 
+      - Installation: index.md
+  - Aloyce: 
+      - Licensing: aloyce/licensing.md
+      - Installation Manager: aloyce/aim.md
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Aloyce-inc
+      name: Aloyce on Github
+
+copyright: Copyright &copy; 2024 - 2025 Aloyce
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - abbr
+  - pymdownx.snippets
+
+extra_css:
+  - stylesheets/extra.css
+
+repo_url: https://github.com/Aloyce-inc
+
