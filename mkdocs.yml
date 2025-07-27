@@ -45,8 +45,8 @@ nav:
   - Getting Started: 
       - Installation: index.md
   - Aloyce: 
-      - Licensing: aloyce/licensing.md
-      - Installation Manager: aloyce/aim.md
+      # - Licensing: aloyce/licensing.md
+      - Aloyce Installation Manager: aloyce/aim.md
 
 extra:
   generator: false
